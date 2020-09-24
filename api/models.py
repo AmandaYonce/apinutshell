@@ -6,7 +6,7 @@ class Manufacturer(models.Model):
     website = models.CharField(max_length=200)
 
 
-class Shoetype(models.Model):
+class ShoeType(models.Model):
     CHOICES = [
         ("sneaker", "sneaker"),
         ("boot", "boot"),
