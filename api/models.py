@@ -30,4 +30,3 @@ class ShoeColor(models.Model):
         ("white", "white")
     ]
     color_name = models.CharField(max_length=20, choices=CHOICES, default="white")
-
