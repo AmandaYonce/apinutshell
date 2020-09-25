@@ -1,3 +1,4 @@
+export const API_SHOE_URL = "http://localhost:8000/api/shoes/";
 export const API_MANUFACTURER_URL = "http://localhost:8000/api/manufacturers/";
 export const API_TYPE_URL = "http://localhost:8000/api/shoeType/";
 export const API_COLOR_URL = "http://localhost:8000/api/shoeColor/";

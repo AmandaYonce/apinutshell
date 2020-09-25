@@ -2,12 +2,6 @@ from rest_framework import serializers
 from .models import *
 
 
-class ShoeSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Shoe
-        fields = ["id", "manufacturer", "brand", "shoe_type", "color", "size", "material", "fastener"]
-
-
 class ManufactureSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Manufacturer
@@ -48,3 +42,19 @@ class FastenerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FastenType
         fields = ["id", "fastener"]
+    
+
+class ShoeSerializer(serializers.HyperlinkedModelSerializer):
+    manufacturer = ManufactureSerializer()
+    brand = BrandSerializer()
+    shoe_type = ShoeTypeSerializer()
+    color = ShoeColorSerializer()
+    size = ShoeSizeSerializer()
+    material = MaterialSerializer()
+    fastener = FastenerSerializer()
+
+    class Meta:
+        model = Shoe
+        fields = ["id", "manufacturer", "brand", "shoe_type", "color", "size", "material", "fastener"]
+
+# serializers.StringRelatedField()
