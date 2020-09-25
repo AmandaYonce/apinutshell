@@ -20,9 +20,14 @@ from api import views as api_views
 
 
 router = routers.DefaultRouter()
+router.register(r"shoe", api_views.ShoeView)
 router.register(r"manufacturers", api_views.ManufacturerView)
 router.register(r"shoeType", api_views.ShoeTypeView)
 router.register(r"shoeColor", api_views.ShoeColorView)
+router.register(r"shoeSize", api_views.ShoeSizeView)
+router.register(r"brandName", api_views.BrandView)
+router.register(r"material", api_views.MaterialView)
+router.register(r"fastener", api_views.FastenerView)
 
 
 urlpatterns = [
